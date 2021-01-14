@@ -1,5 +1,5 @@
 #!/bin/sh
 
-python manage.py makemigrations
-python manage.py migrate
+python backend/heros/manage.py makemigrations
+python backend/heros/manage.py migrate
 
