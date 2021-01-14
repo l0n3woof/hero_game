@@ -1,0 +1,17 @@
+language: python
+
+python:
+        - 3.5
+        - 3.6
+        - 3.7
+        - 3.8
+
+services: postgresql
+
+script:
+  - sh build_forum.sh
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
