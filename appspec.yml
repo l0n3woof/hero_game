@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /home/ubuntu/hero_game
+hooks:
+  BeforeInstall:
+    - location: test_script.sh 
+      timeout: 30
+      runas: ubuntu
+  AfterInstall:
+    - location: test_script.sh
+      timeout: 30
+      runas: ubuntu
+  ApplicationStart:
+    - location: test_script.sh
+      timeout: 30
+      runas: ubuntu
+  ApplicationStop:
+    - location: test_script.sh
+      timeout: 30
+      runas: ubuntu
